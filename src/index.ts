@@ -8,8 +8,6 @@ let rectSize: number;
 let rectAddingInterval: number;
 
 window.onload = () => {
-  rectSize = 20;
-  rectAddingInterval = 60;
   engine = Engine.create();
   render = Render.create({
     element: document.body,
@@ -25,8 +23,10 @@ window.onload = () => {
   Engine.run(engine);
   Render.run(render);
   util.init(engine);
-  util.addCircle(100, 0, 20);
   initRepl();
+  rectSize = 20;
+  rectAddingInterval = 60;
+  util.addCircle(100, 0, 20);
   update();
 };
 
